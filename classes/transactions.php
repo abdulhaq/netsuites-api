@@ -2,11 +2,19 @@
 
 require_once '../vendor/autoload.php';
 
+use NetSuite\Classes\AddRequest;
+use NetSuite\Classes\CashSale;
+use NetSuite\Classes\CashSaleItem;
+use NetSuite\Classes\CashSaleItemList;
+use NetSuite\Classes\RecordRef;
+use NetSuite\Classes\SearchEnumMultiSelectField;
+use NetSuite\Classes\SearchRequest;
+use NetSuite\Classes\TransactionSearchBasic;
 use NetSuite\NetSuiteService;
 
 class Transactions
 {
-    public function getTransaction()
+    function getTransaction()
     {
         require '../config.php';
         $service = new NetSuiteService($config);
@@ -37,7 +45,7 @@ class Transactions
         }
     }
 
-    public function createTransaction()
+    function createTransaction()
     {
         require '../config.php';
         $service = new NetSuiteService($config);

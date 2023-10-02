@@ -2,6 +2,14 @@
 
 require_once '../vendor/autoload.php';
 
+use NetSuite\Classes\AddRequest;
+use NetSuite\Classes\Address;
+use NetSuite\Classes\Customer;
+use NetSuite\Classes\CustomerAddressbook;
+use NetSuite\Classes\CustomerAddressbookList;
+use NetSuite\Classes\GetRequest;
+use NetSuite\Classes\RecordRef;
+use NetSuite\Classes\UpdateRequest;
 use NetSuite\NetSuiteService;
 
 class Customers
@@ -120,6 +128,3 @@ class Customers
         }
     }
 }
-
-$obj = new Customers();
-$obj->getCustomer();
